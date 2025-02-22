@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Atividades Acadêmicas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Controle de Atividades Acadêmicas</h1>
+    <label>Descrição da Atividade:</label>
+    <input type="text" id="descricaoAtividade"><br>
+    
+    <label>Área:</label>
+    <select id="area" onchange="carregarTipos()">
+        <option value="Ensino">Ensino</option>
+        <option value="Extensao">Extensão</option>
+        <option value="Pesquisa">Pesquisa</option>
+    </select><br>
+
+    <label>Tipo de Atividade:</label>
+    <select id="tipoAtividade"></select><br>
+
+    <label>Total de Horas:</label>
+    <input type="number" id="horasAtividade" step="0.1"><br>
+    
+    <button onclick="registrarAtividade()">Registrar</button>
+    <button onclick="resetarRegistros()">Resetar</button>
+    
+    <h2>Atividades Registradas</h2>
+    <ul id="listaAtividades"></ul>
+    <h2>Horas por Área</h2>
+    <p>Ensino: <span id="totalEnsino">0</span>/90h</p>
+    <p>Extensão: <span id="totalExtensao">0</span>/90h</p>
+    <p>Pesquisa: <span id="totalPesquisa">0</span>/90h</p>
+    <h2>Total de Horas: <span id="totalHoras">0</span>/150h</h2>
+</body>
+</html>
