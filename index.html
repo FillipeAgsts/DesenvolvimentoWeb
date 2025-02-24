@@ -11,6 +11,8 @@
 </head>
 <body>
     <h1>Controle de Atividades Acadêmicas</h1>
+    
+    <!-- Campos do formulário -->
     <label>Descrição da Atividade:</label>
     <input type="text" id="descricaoAtividade"><br>
     
@@ -26,16 +28,35 @@
 
     <label>Total de Horas:</label>
     <input type="number" id="horasAtividade" step="0.1"><br>
+
+    <!-- Campos adicionais -->
+    <label>Data da Atividade:</label>
+    <input type="date" id="dataAtividade"><br>
+
+    <label>Local da Atividade:</label>
+    <input type="text" id="localAtividade"><br>
+
+    <label>Responsável pela Atividade:</label>
+    <input type="text" id="responsavelAtividade"><br>
+
+    <label>Comprovante (URL):</label>
+    <input type="url" id="comprovanteAtividade"><br>
     
+    <!-- Botões de ação -->
     <button onclick="registrarAtividade()">Registrar</button>
     <button onclick="resetarRegistros()">Resetar</button>
     
+    <!-- Lista de atividades registradas -->
     <h2>Atividades Registradas</h2>
     <ul id="listaAtividades"></ul>
+
+    <!-- Horas por área -->
     <h2>Horas por Área</h2>
     <p>Ensino: <span id="totalEnsino">0</span>/90h</p>
     <p>Extensão: <span id="totalExtensao">0</span>/90h</p>
     <p>Pesquisa: <span id="totalPesquisa">0</span>/90h</p>
+
+    <!-- Total geral de horas -->
     <h2>Total de Horas: <span id="totalHoras">0</span>/150h</h2>
 </body>
 </html>
